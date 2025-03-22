@@ -1,6 +1,6 @@
 # Use Maven to build the application
 FROM maven:3.8.5-openjdk-17 AS build
-COPY . .
+COPY demo .
 RUN mvn clean package -DskipTests
 
 # Use OpenJDK to run the application
