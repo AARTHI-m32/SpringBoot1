@@ -22,6 +22,7 @@ public class UserServiceImpl {
     private UserRepository userRepository;
 
 
+
     public User createUser(User user) {
 
         return userRepository.save(user);
@@ -40,5 +41,15 @@ public class UserServiceImpl {
     public List<User> getUser() {
 
         return userRepository.findAll();
+    }
+
+    public User findByName(String name)
+    {
+        return userRepository.findByName(name);
+    }
+    public User findByNameAndEmail(String name, String email)
+    {
+
+        return userRepository.findByNameAndEmail(name, email);
     }
 }
